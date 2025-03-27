@@ -1673,6 +1673,7 @@
                                 <div class="contact-form mt-45">
                                     <form action="https://api.web3forms.com/submit" method="POST">
                                         <input type="hidden" name="access_key" value="dd7f5eff-b872-4314-ac35-cd68b7ce8121">
+                                        <input type="hidden" name="from_name" value="New Form Submission (Subhankar Das Portfolio Website)">
                                         <div class="contact-info pt-20">
                                             <div class="row">
                                                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 pr6 mb-12"
@@ -1707,7 +1708,7 @@
                                                     data-aos-duration="2500">
                                                     <input
                                                         class="subject w-100 theme-border pl-20 pt-15 pb-15 pr-10 form-color border-radius5 openS-font-family"
-                                                        type="text" name="inputSubject" id="inputSubject"
+                                                        type="text" name="subject" id="inputSubject"
                                                         placeholder="Your Subject">
                                                     <!-- /subject -->
                                                 </div><!-- /col -->
@@ -1718,13 +1719,14 @@
                                                     data-aos-duration="2000">
                                                     <textarea
                                                         class="massage w-100 theme-border pl-20 pt-15 pr-10 form-color border-radius5 openS-font-family"
-                                                        name="inputMessage" 
+                                                        name="inputMessage"
                                                         id="inputMessage"
-                                                        placeholder="Start writing message here;"
+                                                        placeholder="Write Your Message Here"
                                                         
                                                     ></textarea>
                                                 </div><!-- /col -->
                                             </div><!-- /row -->
+                                            <div class="h-captcha" data-captcha="true"></div>
                                             <button
                                                 class="btn position-relative over-hidden d-inline-block theme-bg text-uppercase"
                                                 type="submit" name="submit" data-aos="fade-up"
@@ -1892,7 +1894,7 @@
     <div class="footer-area over-hidden">
         <div class="footer-top">
             <div class="container">
-                <div class="row justify-content-between">
+                <div class="row justify-content-between align-items-center"> <!-- Added align-items-center -->
                     <!-- Logo and Copyright Section -->
                     <div class="col-12 col-md-4 col-lg-3">
                         <div class="footer-widget footer-logo pb-20">
@@ -1940,6 +1942,7 @@
                             </ul>
                         </div>
                     </div>
+                    
 
                     <!-- Newsletter Section -->
                     <div class="col-12 col-md-4 col-lg-4">
@@ -2000,6 +2003,8 @@
     <script src="js/vanilla-tilt.min.js"></script>
     <script src="js/jquery.meanmenu.min.js"></script>
     <script src="js/main.js"></script>
+
+    <script src="https://web3forms.com/client/script.js" async defer></script>
 
 
 </body>
