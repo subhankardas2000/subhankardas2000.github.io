@@ -2006,7 +2006,64 @@
     <script src="js/vanilla-tilt.min.js"></script>
     <script src="js/jquery.meanmenu.min.js"></script>
     <script src="js/main.js"></script>
-
+<script>
+        // Prevent zooming
+        document.addEventListener('keydown', function(e) {
+            if ((e.ctrlKey || e.metaKey) && (e.key === '+' || e.key === '-' || e.key === '0')) {
+                e.preventDefault();
+            }
+        });
+    
+        // Prevent zoom on double tap/pinch
+        document.addEventListener('touchstart', function(e) {
+            if (e.touches.length > 1) {
+                e.preventDefault();
+            }
+        }, { passive: false });
+    
+        // Prevent context menu (right click)
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+    
+        // Prevent keyboard shortcuts
+        document.addEventListener('keydown', function(e) {
+            // Prevent Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U, F12
+            if (
+                (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'i' || e.key === 'J' || e.key === 'j')) ||
+                (e.ctrlKey && (e.key === 'U' || e.key === 'u')) ||
+                e.key === 'F12'
+            ) {
+                e.preventDefault();
+            }
+        });
+    
+        // Prevent image drag
+        document.addEventListener('dragstart', function(e) {
+            e.preventDefault();
+        });
+    
+        // Prevent copy/paste
+        document.addEventListener('copy', function(e) {
+            e.preventDefault();
+        });
+        document.addEventListener('paste', function(e) {
+            e.preventDefault();
+        });
+        document.addEventListener('cut', function(e) {
+            e.preventDefault();
+        });
+    
+        // Prevent text selection
+        document.addEventListener('selectstart', function(e) {
+            e.preventDefault();
+        });
+    
+        // Disable developer tools
+        setInterval(function() {
+            debugger;
+        }, 100);
+    </script>
     <script src="https://web3forms.com/client/script.js" async defer></script>
 
 
